@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vaccination project</title>
 </head>
 <body>
-    <div class="navbar">
+   
         <h3>Vaccination project</h3>
   
      
-        <ul id="signButton">
-          <li><a href="" id="login">Login</a></li>
-          <li><a href="/signUpUser" id="signup">Signup</a></li>
-        </ul>
-      </div>
+      <a th:href="@{/signUpUser}">Add user</a>
+      <a th:href="@{/showUsers}">show all users</a>
 </body>
 </html>

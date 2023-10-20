@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Users List</h1>
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Vaccine</th>
+            <th>ID Type</th>
+        </tr>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.contact}"></td>
+            <td th:text="${user.vaccine}"></td>
+            <td th:text="${user.idtype}"></td>
+        </tr>
+    </table>
+</body>
+</html>

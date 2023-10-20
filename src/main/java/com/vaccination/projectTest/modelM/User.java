@@ -1,5 +1,6 @@
 package com.vaccination.projectTest.modelM;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,7 +10,8 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="usersv")
 public class User {
-        @Id
+    @Column
+     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     public User() {
@@ -47,5 +49,11 @@ public class User {
      @Override
     public String toString() {
         return "User [name=" + name + ", contact=" + contact + ", vaccine=" + vaccine + ", idtype=" + idtype + "]";
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
 }
